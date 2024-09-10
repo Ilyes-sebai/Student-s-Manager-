@@ -1,0 +1,148 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; 
+    color: #e0e0e0; 
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+header {
+    background-color: #1e3a8a; 
+    padding: 20px;
+    text-align: center;
+    color: #ffffff; 
+}
+header #logo{
+width: 45px;
+position: absolute;
+left: 37%;
+top: 4.8%;
+
+}
+
+/* Container for form and student list */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1f2937; 
+    border-radius: 10px;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #e0e0e0; 
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #4b5563; 
+    border-radius: 5px;
+    background-color: #374151;
+    color: #e0e0e0; 
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3b82f6; 
+    color: #ffffff; 
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #2563eb; 
+}
+
+/* Title for student list */
+#studentListTitle {
+    text-align: center;
+    color: #ffffff; 
+    background-color: #1e3a8a;
+    border: 2px solid #3b82f6; 
+    padding: 10px;
+    margin: 20px 0; 
+    font-size: 24px; 
+    border-radius: 5px;
+}
+
+/* Styling student cards */
+.student-list {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+}
+
+.student-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #374151; 
+    color: #e0e0e0; 
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    max-width: 300px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+}
+
+.student-card img {
+    width: 120px; 
+    height: 120px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 3px solid #3b82f6; 
+}
+
+.student-card .info {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.student-card .buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.student-card .remove-btn,
+.student-card .modify-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3b82f6;
+    color: #ffffff; 
+    cursor: pointer;
+}
+
+.student-card .remove-btn:hover,
+.student-card .modify-btn:hover {
+    background-color: #2563eb;
+}
+
+/* button position */
+button[type="submit"] {
+    margin-bottom: 25px;
+    left: 50%; 
+}
+

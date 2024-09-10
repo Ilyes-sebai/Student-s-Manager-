@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+    <link rel="icon" href="/images/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Student's Manager</h1>
+        <img src="/images/manager.png" alt="logo" id="logo">
+    </header>
+    <div class="container">
+        <form id="studentForm" autocomplete="off">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label>Age:</label>
+                <input type="number" id="age" autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label>Gender:</label>
+                <select id="gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Upload Image:</label>
+                <input type="file" id="image">
+            </div>
+            <div class="form-group">
+                <label>Features:</label>
+                <textarea id="features" autocomplete="off"></textarea>
+            </div>
+            <button type="submit">Add Student</button>
+        </form>
+        <button id="hideShowList" style="display: none;">Show List</button>
+        <center>
+            <h2 id="listTitle" style="display: none;">List of Students</h2>
+        </center>
+        <button id="sortByAge">Sort By Age</button> 
+        <div id="studentList" class="student-list"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
