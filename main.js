@@ -1,9 +1,8 @@
-$(document).ready(function() {
-    let students = []; // Global array to store student data
 
+    let students = []
     function createStudent(name, age, image, features) {
         return {
-            id: Date.now(), // Unique ID based on timestamp
+            id: Date.now(),// Unique ID 
             name: name,
             age: age,
             image: image,
@@ -22,7 +21,6 @@ $(document).ready(function() {
                 </div>
                 <div class="buttons">
                     <button class="remove-btn" data-id="${student.id}">Remove</button>
-                    <button class="modify-btn" data-id="${student.id}">Modify</button>
                 </div>
             </div>
         `);
@@ -49,9 +47,9 @@ $(document).ready(function() {
         if (file) {
             uploadImage(file, function (image) {
                 var student = createStudent(name, age, image, features);
-                students.push(student); // Add new student to the global array
-                displayStudent(student); // Display the new student card
-                $("#studentForm")[0].reset(); // Clear the form fields
+                students.push(student); 
+                displayStudent(student); 
+                $("#studentForm")[0].reset(); 
             });
         } else {
             alert("Please upload an image");
@@ -60,14 +58,14 @@ $(document).ready(function() {
 
     $("#studentList").on("click", ".remove-btn", function () {
         var id = $(this).data("id");
-        $(`#student-${id}`).remove(); // Remove the student card from the DOM
+        $(`#student-${id}`).remove(); // Remove the student card 
     });
 
     function sortByAge() {
-        students.sort((a, b) => b.age - a.age); // Sort students by age
+        students.sort((a, b) => b.age - a.age); 
         $('#studentList').empty(); // Clear the current list
         for (let i = 0; i < students.length; i++) {
-            displayStudent(students[i]); // Re-display sorted students
+            displayStudent(students[i]); 
         }
     }
 
@@ -85,4 +83,4 @@ $(document).ready(function() {
             $(this).text('Hide List');
         }
     });
-});
+;
